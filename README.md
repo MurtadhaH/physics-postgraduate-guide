@@ -7,7 +7,11 @@
 
 ## Current release
 
-**V16 — GitHub Production Release**
+**v1.0.0 — Initial Production Release**
+
+The first production release of the Physics Postgraduate Guide,
+designed and developed by Murtadha Altufaily.
+
 
 The project includes:
 
