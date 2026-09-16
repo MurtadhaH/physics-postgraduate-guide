@@ -1228,3 +1228,322 @@ body[data-route="guidance"] .content-container { width: min(1180px, calc(100% - 
   .guidance-related__links { display: grid; }
   .guidance-related__link { width: 100%; justify-content: space-between; }
 }
+
+/* ==========================================================
+   V17 — GUIDANCE MOBILE RESPONSIVE HARDENING
+   Prevent any intrinsic-width content from forcing desktop scaling.
+   ========================================================== */
+
+body[data-route="guidance"] {
+  overflow-x: clip;
+}
+
+body[data-route="guidance"] .site-main,
+body[data-route="guidance"] .view[data-view="guidance"],
+body[data-route="guidance"] .content-container,
+body[data-route="guidance"] .guidance-grid,
+body[data-route="guidance"] .guidance-source,
+body[data-route="guidance"] .guidance-layout,
+body[data-route="guidance"] .guidance-toc,
+body[data-route="guidance"] .guidance-sections,
+body[data-route="guidance"] .guidance-section,
+body[data-route="guidance"] .guidance-section__head,
+body[data-route="guidance"] .guidance-section__identity,
+body[data-route="guidance"] .guidance-section__body,
+body[data-route="guidance"] .guidance-subsection,
+body[data-route="guidance"] .guidance-list,
+body[data-route="guidance"] .guidance-block--paragraph,
+body[data-route="guidance"] .guidance-related,
+body[data-route="guidance"] .guidance-specs,
+body[data-route="guidance"] .guidance-spec,
+body[data-route="guidance"] .guidance-note {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body[data-route="guidance"] .guidance-source__copy,
+body[data-route="guidance"] .guidance-section__head h2,
+body[data-route="guidance"] .guidance-section__summary,
+body[data-route="guidance"] .guidance-subsection p,
+body[data-route="guidance"] .guidance-block--paragraph p,
+body[data-route="guidance"] .guidance-subsection li,
+body[data-route="guidance"] .guidance-list li,
+body[data-route="guidance"] .guidance-spec dd,
+body[data-route="guidance"] .guidance-note p,
+body[data-route="guidance"] .guidance-related__link {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 900px) {
+  body[data-route="guidance"] .content-container {
+    width: 100%;
+    max-width: 760px;
+    padding-inline: 12px;
+    margin-inline: auto;
+  }
+
+  body[data-route="guidance"] .guidance-layout {
+    display: block;
+    width: 100%;
+  }
+
+  body[data-route="guidance"] .guidance-toc {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  body[data-route="guidance"] .guidance-toc__list {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body[data-route="guidance"] .guidance-toc__item {
+    min-width: max-content;
+    max-width: min(72vw, 260px);
+  }
+
+  body[data-route="guidance"] .guidance-sections,
+  body[data-route="guidance"] .guidance-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-route="guidance"] .content-container {
+    width: 100%;
+    max-width: none;
+    padding: 16px 10px 38px;
+  }
+
+  body[data-route="guidance"] .page-heading--guidance {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  body[data-route="guidance"] .page-heading--guidance h1 {
+    font-size: clamp(1.72rem, 8vw, 2.1rem);
+    line-height: 1.2;
+  }
+
+  body[data-route="guidance"] .page-heading--guidance p:last-child {
+    max-width: 100%;
+    font-size: .78rem;
+    line-height: 1.75;
+  }
+
+  body[data-route="guidance"] .toolbar--guidance,
+  body[data-route="guidance"] .search-field--guidance {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body[data-route="guidance"] .guidance-source {
+    width: 100%;
+    grid-template-columns: 42px minmax(0,1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  body[data-route="guidance"] .guidance-source__mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  body[data-route="guidance"] .guidance-source__copy > span {
+    font-size: .68rem;
+  }
+
+  body[data-route="guidance"] .guidance-source__copy strong {
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
+  body[data-route="guidance"] .guidance-source__copy small {
+    font-size: .66rem;
+  }
+
+  body[data-route="guidance"] .guidance-source__download {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  body[data-route="guidance"] .guidance-toc {
+    border-radius: 13px;
+  }
+
+  body[data-route="guidance"] .guidance-toc__head {
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: .68rem;
+  }
+
+  body[data-route="guidance"] .guidance-toc__list {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  body[data-route="guidance"] .guidance-toc__item {
+    min-width: max-content;
+    max-width: 76vw;
+    min-height: 40px;
+    grid-template-columns: 28px minmax(0,1fr);
+    padding: 5px 8px;
+  }
+
+  body[data-route="guidance"] .guidance-toc__item > span {
+    width: 28px;
+    height: 28px;
+  }
+
+  body[data-route="guidance"] .guidance-toc__item b {
+    max-width: 190px;
+    font-size: .68rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  body[data-route="guidance"] .guidance-section {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  body[data-route="guidance"] .guidance-section__head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    gap: 9px;
+    padding: 14px 13px 12px;
+  }
+
+  body[data-route="guidance"] .guidance-section__identity {
+    width: 100%;
+    gap: 10px;
+  }
+
+  body[data-route="guidance"] .guidance-section__identity > div {
+    min-width: 0;
+  }
+
+  body[data-route="guidance"] .guidance-section__number {
+    width: 36px;
+    height: 36px;
+  }
+
+  body[data-route="guidance"] .guidance-section__eyebrow {
+    font-size: .62rem;
+  }
+
+  body[data-route="guidance"] .guidance-section__head h2 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  body[data-route="guidance"] .guidance-section__meta {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: .64rem;
+  }
+
+  body[data-route="guidance"] .guidance-section__summary {
+    width: 100%;
+    font-size: .76rem;
+    line-height: 1.8;
+  }
+
+  body[data-route="guidance"] .guidance-section__body {
+    width: 100%;
+    gap: 8px;
+    padding: 9px;
+  }
+
+  body[data-route="guidance"] .guidance-subsection,
+  body[data-route="guidance"] .guidance-list,
+  body[data-route="guidance"] .guidance-block--paragraph,
+  body[data-route="guidance"] .guidance-related,
+  body[data-route="guidance"] .guidance-note {
+    width: 100%;
+    padding: 11px;
+  }
+
+  body[data-route="guidance"] .guidance-subsection h3,
+  body[data-route="guidance"] .guidance-list h3,
+  body[data-route="guidance"] .guidance-related h3 {
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
+  body[data-route="guidance"] .guidance-subsection p,
+  body[data-route="guidance"] .guidance-block--paragraph p,
+  body[data-route="guidance"] .guidance-subsection li,
+  body[data-route="guidance"] .guidance-list li {
+    font-size: .75rem;
+    line-height: 1.9;
+  }
+
+  body[data-route="guidance"] .guidance-list--steps li,
+  body[data-route="guidance"] .guidance-list--numbered-list li {
+    padding-left: 2px;
+    padding-right: 40px;
+  }
+
+  body[data-route="guidance"] .guidance-specs {
+    width: 100%;
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  body[data-route="guidance"] .guidance-spec {
+    width: 100%;
+  }
+
+  body[data-route="guidance"] .guidance-spec dt {
+    font-size: .66rem;
+  }
+
+  body[data-route="guidance"] .guidance-spec dd,
+  body[data-route="guidance"] .guidance-note p {
+    font-size: .73rem;
+    line-height: 1.85;
+  }
+
+  body[data-route="guidance"] .guidance-note strong {
+    font-size: .76rem;
+  }
+
+  body[data-route="guidance"] .guidance-related__links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  body[data-route="guidance"] .guidance-related__link {
+    width: 100%;
+    min-width: 0;
+    font-size: .72rem;
+  }
+}
+
+@media (max-width: 360px) {
+  body[data-route="guidance"] .content-container {
+    padding-inline: 8px;
+  }
+
+  body[data-route="guidance"] .guidance-section__head {
+    padding-inline: 11px;
+  }
+
+  body[data-route="guidance"] .guidance-section__body {
+    padding: 7px;
+  }
+}
