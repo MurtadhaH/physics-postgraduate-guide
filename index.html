@@ -1,0 +1,423 @@
+<!--
+  Physics Postgraduate Guide
+  Designed & Developed by Murtadha Altufaily
+  Copyright © 2026 Murtadha Altufaily. All Rights Reserved.
+  Unauthorized copying, redistribution, modification, or republication is not permitted.
+-->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f9fc" />
+  <meta name="description" content="دليل طلبة الدراسات العليا في قسم علوم الفيزياء، كلية العلوم، جامعة بغداد." />
+  <meta name="author" content="Murtadha Altufaily" />
+  <meta name="creator" content="Murtadha Altufaily" />
+  <meta name="copyright" content="Copyright © 2026 Murtadha Altufaily. All Rights Reserved." />
+  <meta name="application-name" content="Physics Postgraduate Guide" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="دليل الدراسات العليا" />
+  <meta property="og:title" content="دليل الدراسات العليا | قسم علوم الفيزياء" />
+  <meta property="og:description" content="دليل طلبة الدراسات العليا في قسم علوم الفيزياء، كلية العلوم، جامعة بغداد." />
+  <title>دليل الدراسات العليا | قسم علوم الفيزياء</title>
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/dev/dev.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#/home" aria-label="الصفحة الرئيسية">
+        <span class="brand__mark" aria-hidden="true">
+          <span class="brand__orbit brand__orbit--a"></span>
+          <span class="brand__orbit brand__orbit--b"></span>
+          <span class="brand__dot"></span>
+        </span>
+        <span class="brand__copy">
+          <strong>دليل الدراسات العليا</strong>
+          <small>قسم علوم الفيزياء · كلية العلوم · جامعة بغداد</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+        <a href="#/home" data-nav="home">الرئيسية</a>
+        <a href="#/procedures" data-nav="procedures">الإجراءات</a>
+        <a href="#/templates" data-nav="templates">النماذج</a>
+        <a href="#/guidance" data-nav="guidance">تعليمات الجامعة</a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="degree-chip" id="degreeChip" type="button" aria-label="تغيير المرحلة الدراسية">
+          <span>المرحلة:</span>
+          <strong id="degreeChipValue">غير محددة</strong>
+        </button>
+
+        <button class="menu-button" id="menuButton" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="التنقل على الهاتف">
+        <a href="#/home" data-nav="home">الرئيسية</a>
+        <a href="#/procedures" data-nav="procedures">الإجراءات</a>
+        <a href="#/templates" data-nav="templates">النماذج</a>
+        <a href="#/guidance" data-nav="guidance">تعليمات الجامعة</a>
+      </nav>
+      <button class="mobile-dev-link" id="mobileDevButton" type="button">تصميم وبرمجة Murtadha Altufaily</button>
+    </div>
+
+    <main class="site-main">
+      <!-- HOME / DEGREE SELECTION -->
+      <section class="view view--home is-active" data-view="home" aria-labelledby="degreeTitle">
+        <div class="degree-stage">
+          <div class="degree-stage__intro">
+            <p class="section-kicker">الدراسات العليا</p>
+            <h1 id="degreeTitle">اختر المرحلة الدراسية</h1>
+            <p>لعرض الإجراءات والنماذج الخاصة بمرحلتك.</p>
+          </div>
+
+          <div class="degree-stage__layout">
+            <div class="character-panel" id="characterPanel">
+              <div class="character-panel__halo" aria-hidden="true"></div>
+
+              <svg id="graduateRig" class="graduate-rig" viewBox="0 0 520 620" role="img" aria-label="طالب دراسات عليا">
+                <defs>
+                  <linearGradient id="suitGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#163b5d" />
+                    <stop offset="1" stop-color="#0b2238" />
+                  </linearGradient>
+                  <linearGradient id="shirtGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ffffff" />
+                    <stop offset="1" stop-color="#eaf0f6" />
+                  </linearGradient>
+                  <linearGradient id="skinGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#eeb08b" />
+                    <stop offset="1" stop-color="#d98e68" />
+                  </linearGradient>
+                  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%">
+                    <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#102b43" flood-opacity=".13" />
+                  </filter>
+                  <clipPath id="leftEyeClip"><ellipse cx="232" cy="215" rx="15" ry="9" /></clipPath>
+                  <clipPath id="rightEyeClip"><ellipse cx="286" cy="215" rx="15" ry="9" /></clipPath>
+                </defs>
+
+                <g class="ambient-orbits" id="ambientOrbits" aria-hidden="true">
+                  <ellipse id="orbitVisibleA" cx="260" cy="340" rx="214" ry="116" transform="rotate(-24 260 340)" />
+                  <ellipse id="orbitVisibleB" cx="260" cy="340" rx="214" ry="116" transform="rotate(25 260 340)" />
+                  <path id="orbitMotionA" class="orbit-motion-path" d="M46 340 A214 116 0 1 1 474 340 A214 116 0 1 1 46 340" transform="rotate(-24 260 340)" />
+                  <path id="orbitMotionB" class="orbit-motion-path" d="M46 340 A214 116 0 1 1 474 340 A214 116 0 1 1 46 340" transform="rotate(25 260 340)" />
+                  <circle id="electronA" cx="46" cy="340" r="7" class="ambient-dot ambient-dot--blue" />
+                  <circle id="electronB" cx="474" cy="340" r="7" class="ambient-dot ambient-dot--gold" />
+                </g>
+
+                <g id="selectionAura" class="selection-aura" aria-hidden="true">
+                  <circle id="auraRingOuter" cx="260" cy="338" r="154" />
+                  <circle id="auraRingInner" cx="260" cy="338" r="127" />
+                  <g id="auraParticles" class="aura-particles">
+                    <circle cx="154" cy="241" r="4" />
+                    <circle cx="366" cy="247" r="3.5" />
+                    <circle cx="386" cy="411" r="4" />
+                    <circle cx="139" cy="402" r="3.5" />
+                  </g>
+                </g>
+
+                <ellipse id="characterShadow" class="character-shadow" cx="260" cy="560" rx="126" ry="24" />
+
+                <g id="characterBody" class="character-body" filter="url(#softShadow)">
+                  <path class="torso" d="M166 548V389c0-58 39-98 94-98s94 40 94 98v159Z" fill="url(#suitGradient)" />
+                  <path d="M260 298 215 334l30 75 15-31 15 31 30-75Z" fill="#1b466b" opacity=".88" />
+                  <path d="M238 299h44l-7 83h-30Z" fill="url(#shirtGradient)" />
+                  <path d="M252 319h16l7 18-15 50-15-50Z" fill="#2b75ce" />
+
+                  <path d="M179 375c-33 41-48 84-43 134" fill="none" stroke="#102c47" stroke-width="40" stroke-linecap="round" />
+                  <path d="M136 509c2 18 7 29 18 39" fill="none" stroke="url(#skinGradient)" stroke-width="23" stroke-linecap="round" />
+                  <path d="M235 286h50v42c-6 12-16 19-25 19s-19-7-25-19Z" fill="url(#skinGradient)" />
+
+                  <g id="headRig" class="head-rig">
+                    <ellipse cx="260" cy="205" rx="78" ry="92" fill="url(#skinGradient)" />
+                    <ellipse cx="181" cy="214" rx="14" ry="24" fill="#dd966f" />
+                    <ellipse cx="339" cy="214" rx="14" ry="24" fill="#dd966f" />
+                    <path d="M184 185c1-62 31-94 76-94 48 0 78 34 77 93-18-17-41-25-65-19-34 8-55-3-88 20Z" fill="#10283d" />
+                    <path d="M196 165c18-10 34-8 49-3 22 8 42-7 77 4" fill="none" stroke="#1d3d57" stroke-width="8" stroke-linecap="round" opacity=".62" />
+                    <path id="browLeft" d="M214 197q17-9 32 0" fill="none" stroke="#75493d" stroke-width="4.5" stroke-linecap="round" />
+                    <path id="browRight" d="M274 197q17-9 32 0" fill="none" stroke="#75493d" stroke-width="4.5" stroke-linecap="round" />
+                    <ellipse cx="232" cy="215" rx="15" ry="9" fill="#fff" opacity=".96" />
+                    <ellipse cx="286" cy="215" rx="15" ry="9" fill="#fff" opacity=".96" />
+                    <g id="pupilRig" class="pupil-rig">
+                      <circle cx="232" cy="215" r="4.3" fill="#132d43" clip-path="url(#leftEyeClip)" />
+                      <circle cx="286" cy="215" r="4.3" fill="#132d43" clip-path="url(#rightEyeClip)" />
+                    </g>
+                    <ellipse class="blink-lid blink-lid--left" cx="232" cy="215" rx="16" ry="10" fill="#e7a17c" />
+                    <ellipse class="blink-lid blink-lid--right" cx="286" cy="215" rx="16" ry="10" fill="#e7a17c" />
+                    <path d="M259 218v23l8 3" fill="none" stroke="#b66f55" stroke-width="3" stroke-linecap="round" opacity=".62" />
+                    <path id="smilePath" d="M238 263q22 18 45 0" fill="none" stroke="#9a5548" stroke-width="4" stroke-linecap="round" />
+
+                    <g id="capRig" class="cap-rig">
+                      <path id="capTop" d="m160 125 100-51 100 51-100 49Z" fill="#0a2238" />
+                      <path id="capBand" d="M206 151h108v31c-17 10-35 14-54 14-20 0-37-4-54-14Z" fill="#143b5b" />
+                      <g id="tasselRig" class="tassel-rig">
+                        <path id="tasselLine" d="M337 130c9 29 10 53 8 80" fill="none" stroke="#e3b441" stroke-width="4" stroke-linecap="round" />
+                        <rect id="tasselWeight" x="338" y="204" width="15" height="28" rx="6" fill="#e3b441" />
+                      </g>
+                    </g>
+                  </g>
+
+                  <g id="pointingArm" class="pointing-arm">
+                    <path id="upperArmShadow" class="arm-segment arm-segment--shadow" d="M343 360 L400 395" />
+                    <path id="upperArm" class="arm-segment arm-segment--upper" d="M343 360 L400 395" />
+                    <circle id="elbowJoint" cx="400" cy="395" r="16" fill="#102c47" />
+                    <path id="foreArmShadow" class="arm-segment arm-segment--shadow arm-segment--fore-shadow" d="M400 395 L460 370" />
+                    <path id="foreArm" class="arm-segment arm-segment--fore" d="M400 395 L460 370" />
+                    <g id="handRig" class="hand-rig" transform="translate(460 370)">
+                      <rect class="shirt-cuff" x="-16" y="-15" width="27" height="30" rx="8" />
+                      <ellipse id="handPalm" class="hand-palm" cx="10" cy="0" rx="19" ry="16" />
+                      <path id="pointFinger" class="hand-finger" d="M17 -6C34-7 52-6 68-3c5 1 7 5 6 9-1 4-4 6-8 6H20Z" />
+                      <path id="pointThumb" class="hand-thumb" d="M6 8c8 2 15 5 20 10 3 3 2 6 0 8-3 2-6 1-8-1L5 16Z" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+
+              <div class="motion-note" aria-hidden="true">
+                <span class="motion-note__dot"></span>
+                <span id="motionNoteText">حرّك المؤشر فوق أحد الخيارين</span>
+              </div>
+
+              <div class="mobile-degree-state" id="mobileDegreeState" data-degree="idle" aria-live="polite">
+                <span class="mobile-degree-state__seal" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
+                    <circle id="mobileSealRing" cx="16" cy="16" r="13" />
+                    <path id="mobileSealCap" d="m6 12 10-5 10 5-10 5Z"/>
+                    <path id="mobileSealBase" d="M10 15v6c4 3 8 3 12 0v-6"/>
+                  </svg>
+                </span>
+                <span class="mobile-degree-state__copy">
+                  <small>المرحلة المختارة</small>
+                  <strong id="mobileStateTitle">لم تُحدد بعد</strong>
+                </span>
+                <span class="mobile-degree-state__check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle id="mobileCheckRing" cx="12" cy="12" r="9" />
+                    <path id="mobileCheckPath" d="m8.1 12.1 2.45 2.45 5.4-5.5" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="degree-choice-panel">
+              <div class="degree-options" id="degreeOptions">
+                <button class="degree-option" type="button" data-degree="master" aria-pressed="false">
+                  <span class="degree-option__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="m4 12 12-6 12 6-12 6Z"/><path d="M8 15v7c5 4 11 4 16 0v-7"/><path d="M28 12v8"/></svg>
+                  </span>
+                  <span class="degree-option__copy">
+                    <strong>الماجستير</strong>
+                    <small>عرض مسار طلبة الماجستير</small>
+                  </span>
+                  <span class="degree-option__action">اختيار</span>
+                </button>
+
+                <button class="degree-option" type="button" data-degree="phd" aria-pressed="false">
+                  <span class="degree-option__icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="m4 12 12-6 12 6-12 6Z"/><path d="M8 15v7c5 4 11 4 16 0v-7"/><path d="M28 12v8"/><path d="m20 23 2 5 2-2 3 .3-2.5-5"/></svg>
+                  </span>
+                  <span class="degree-option__copy">
+                    <strong>الدكتوراه</strong>
+                    <small>عرض مسار طلبة الدكتوراه</small>
+                  </span>
+                  <span class="degree-option__action">اختيار</span>
+                </button>
+              </div>
+
+              <div class="degree-next-slot" aria-live="polite">
+                <button class="degree-next" id="degreeNextButton" type="button" hidden>
+                  <span id="degreeNextText">التالي</span>
+                  <span class="degree-next__arrow" aria-hidden="true">←</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROCEDURES -->
+      <section class="view content-view procedures-view" data-view="procedures" aria-labelledby="proceduresTitle" hidden>
+        <div class="content-container procedure-container">
+          <header class="procedure-heading">
+            <div>
+              <p class="section-kicker" id="proceduresKicker">المسار الدراسي</p>
+              <h1 id="proceduresTitle">الإجراءات</h1>
+              <p id="proceduresDescription">انتقل بين مراحل المسار، وافتح أي خطوة لعرض متطلباتها وإجراءاتها المرتبطة.</p>
+            </div>
+
+            <div class="procedure-heading__actions">
+              <div class="procedure-degree" aria-label="المرحلة الدراسية الحالية">
+                <span>المرحلة</span>
+                <strong data-current-degree>غير محددة</strong>
+              </div>
+              <button class="change-degree-button" type="button" data-change-degree>تغيير المرحلة</button>
+            </div>
+          </header>
+
+          <nav class="procedure-phases" id="procedurePhases" role="tablist" aria-label="مراحل الإجراءات"></nav>
+
+          <section class="procedure-workspace" aria-live="polite">
+            <header class="procedure-workspace__head">
+              <div>
+                <span class="procedure-workspace__eyebrow" id="procedurePhaseKicker">المرحلة 01</span>
+                <h2 id="procedurePhaseTitle">قبل المناقشة</h2>
+                <p id="procedurePhaseDescription">ستظهر الإجراءات الرسمية هنا بالترتيب المعتمد.</p>
+              </div>
+
+              <div class="procedure-workspace__meta">
+                <span id="procedureCountLabel">0 إجراء</span>
+              </div>
+            </header>
+
+            <div class="procedure-content" id="proceduresContent">
+              <div class="procedure-empty">
+                <span class="procedure-empty__icon" aria-hidden="true">01</span>
+                <div>
+                  <h3>لم تُضف الإجراءات الرسمية بعد</h3>
+                  <p>عند إضافة الإجراءات ستظهر كل خطوة بالترتيب، ومعها النماذج والملفات المطلوبة مباشرة.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- TEMPLATES -->
+      <section class="view content-view" data-view="templates" aria-labelledby="templatesTitle" hidden>
+        <div class="content-container templates-container">
+          <header class="page-heading templates-heading">
+            <div>
+              <p class="section-kicker" id="templatesKicker">الملفات الرسمية</p>
+              <h1 id="templatesTitle">النماذج</h1>
+              <p id="templatesDescription">كل النماذج المرتبطة بإجراءات مرحلتك في مكان واحد.</p>
+            </div>
+            <div class="templates-heading__actions">
+              <div class="templates-degree" aria-label="المرحلة الدراسية الحالية">
+                <span>المرحلة</span>
+                <strong data-current-degree>غير محددة</strong>
+              </div>
+              <button class="change-degree-button" type="button" data-change-degree>تغيير المرحلة</button>
+            </div>
+          </header>
+
+          <div class="templates-overview" id="templatesOverview" aria-label="ملخص النماذج"></div>
+
+          <div class="templates-toolbar">
+            <label class="search-field templates-search">
+              <span class="sr-only">بحث في النماذج</span>
+              <input id="templateSearch" type="search" placeholder="بحث باسم النموذج أو الملف" autocomplete="off" />
+              <span aria-hidden="true">⌕</span>
+            </label>
+            <div class="template-phase-filters" id="templatePhaseFilters" role="tablist" aria-label="تصفية النماذج حسب المرحلة"></div>
+          </div>
+
+          <div id="templatesContent" class="templates-content" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- UNIVERSITY GUIDANCE -->
+      <section class="view content-view" data-view="guidance" aria-labelledby="guidanceTitle" hidden>
+        <div class="content-container">
+          <header class="page-heading page-heading--guidance">
+            <div>
+              <p class="section-kicker" id="guidanceKicker">جامعة بغداد · كلية العلوم</p>
+              <h1 id="guidanceTitle">دليل كتابة الرسالة والأطروحة</h1>
+              <p id="guidanceDescription">تعليمات الجامعة مرتبة في أقسام واضحة وقابلة للوصول المباشر.</p>
+            </div>
+          </header>
+
+          <div class="toolbar toolbar--guidance">
+            <label class="search-field search-field--guidance">
+              <span class="sr-only">بحث في تعليمات الجامعة</span>
+              <input id="guidanceSearch" type="search" placeholder="ابحث: الهوامش، المستخلص، المصادر..." autocomplete="off" />
+              <span aria-hidden="true">⌕</span>
+            </label>
+          </div>
+
+          <div class="guidance-grid" id="guidanceGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="تذييل الموقع">
+      <div class="site-footer__inner">
+        <p class="site-footer__meta">
+          <span class="site-footer__label">دليل الدراسات العليا</span>
+          <span class="site-footer__institution"> · قسم علوم الفيزياء · كلية العلوم · جامعة بغداد</span>
+        </p>
+
+        <button class="site-footer__developer" id="footerDevButton" type="button" title="Designed & Developed by Murtadha Altufaily">
+          <span>تصميم وبرمجة <bdi>Murtadha Altufaily</bdi></span>
+          <small>© 2026 جميع الحقوق محفوظة</small>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="choice-dialog" id="choiceDialog" aria-labelledby="choiceDialogTitle">
+    <div class="choice-dialog__icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><path d="m4 12 12-6 12 6-12 6Z"/><path d="M8 15v7c5 4 11 4 16 0v-7"/></svg>
+    </div>
+    <h2 id="choiceDialogTitle">اختر المرحلة الدراسية أولًا</h2>
+    <p id="choiceDialogText">يجب تحديد الماجستير أو الدكتوراه قبل فتح هذا القسم.</p>
+    <div class="choice-dialog__actions">
+      <button class="choice-dialog__primary" id="chooseDegreeButton" type="button">اختيار المرحلة</button>
+      <button class="choice-dialog__secondary" id="closeChoiceDialog" type="button">إلغاء</button>
+    </div>
+  </dialog>
+
+  <dialog class="completion-dialog" id="completionDialog" aria-labelledby="completionDialogTitle">
+    <div class="completion-dialog__icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="12"></circle>
+        <path d="m10.5 16.5 3.5 3.5 7.5-8"></path>
+      </svg>
+    </div>
+    <h2 id="completionDialogTitle">تأكيد إكمال الخطوة</h2>
+    <p id="completionDialogText">هل أنت متأكد من إكمال هذه الخطوة؟</p>
+    <div class="completion-dialog__step" id="completionDialogStep" hidden></div>
+    <div class="completion-dialog__actions">
+      <button class="completion-dialog__primary" id="confirmCompletionButton" type="button">نعم، اكتملت</button>
+      <button class="completion-dialog__secondary" id="cancelCompletionButton" type="button">إلغاء</button>
+    </div>
+  </dialog>
+
+  <dialog class="completion-dialog file-dialog" id="fileDialog" aria-labelledby="fileDialogTitle">
+    <div class="completion-dialog__icon file-dialog__icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <path d="M9 4h9l5 5v19H9z"></path>
+        <path d="M18 4v6h6"></path>
+        <path d="M12.5 18h7"></path>
+      </svg>
+    </div>
+    <h2 id="fileDialogTitle">الملف غير متوفر</h2>
+    <p id="fileDialogText">لم يتم رفع هذا الملف بعد.</p>
+    <div class="completion-dialog__step" id="fileDialogName" hidden></div>
+    <div class="completion-dialog__actions file-dialog__actions">
+      <button class="completion-dialog__primary" id="closeFileDialogButton" type="button">حسنًا</button>
+    </div>
+  </dialog>
+
+  <!-- Developer card is mounted here unchanged. -->
+  <div class="developer-overlay" id="developerOverlay" hidden aria-hidden="true">
+    <button class="developer-overlay__backdrop" type="button" data-close-developer aria-label="إغلاق بطاقة المطور"></button>
+    <div class="developer-overlay__panel" id="developerMount" data-dev-signature></div>
+  </div>
+
+  <script src="./assets/data/site-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/CustomEase.min.js"></script>
+  <script src="./assets/js/student-rig.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/dev/dev.js"></script>
+</body>
+</html>

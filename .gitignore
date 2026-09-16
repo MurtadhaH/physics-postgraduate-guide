@@ -1,0 +1,16 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary / local development
+*.log
+*.tmp
+*.bak
+.cache/
+node_modules/
+
+# Local preview files
+preview/
+previews/
